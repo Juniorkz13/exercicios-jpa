@@ -16,7 +16,9 @@ public class Produto {
     private Long id;
     @Column(name = "des_nome", length = 200, nullable = false)
     private String nome;
-    @Column(name = "val_preco", nullable = false, precision = 11, scale = 2) // precision é o tamanho do campo, scale é a quantidade de casas decimais após a vírgula
+    @Column(name = "val_preco", nullable = false, precision = 11, scale = 2) // precision é o tamanho do campo, scale é
+                                                                             // a quantidade de casas decimais após a
+                                                                             // vírgula
     private Double preco;
 
     public Produto() {
