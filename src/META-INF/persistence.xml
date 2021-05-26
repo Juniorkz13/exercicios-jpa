@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1" 
-    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="exercicios-jpa">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <mapping-file>META-INF/consultas.xml</mapping-file>
+
         <class>modelo.basico.Usuario</class>
         <class>modelo.basico.Produto</class>
-        
-        <!-- <mapping-file>META-INF/consultas.xml</mapping-file> -->
-        
+        <class>modelo.basico.umparaum.Assento</class>
+        <class>modelo.basico.umparaum.Cliente</class>
+        <class>modelo.basico.umparamuitos.ItemPedido</class>
+        <class>modelo.basico.umparamuitos.Pedido</class>
+        <class>modelo.basico.muitosparamuitos.Tio</class>
+        <class>modelo.basico.muitosparamuitos.Sobrinho</class>
+        <class>modelo.basico.muitosparamuitos.Filme</class>
+        <class>modelo.basico.muitosparamuitos.Ator</class>
+        <class>modelo.basico.composicao.Endereco</class>
+        <class>modelo.basico.composicao.Fornecedor</class>
+        <class>modelo.basico.composicao.Funcionario</class>
+        <class>modelo.basico.heranca.Aluno</class>
+        <class>modelo.basico.heranca.AlunoBolsista</class>
+
+
         <properties>
-            <property name="javax.persistence.jdbc.driver"
-                value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url"
-                value="jdbc:mysql://localhost/curso_java?serverTimezone=America/Sao_Paulo"/>
-            <property name="javax.persistence.jdbc.user"
-                value="root"/>
-            <property name="javax.persistence.jdbc.password"
-                value="123456"/>
-            
-            <property name="hibernate.dialect"
-                value="org.hibernate.dialect.MySQL57Dialect"/>
-            <property name="hibernate.show_sql" value="false"/>
-            <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/curso_java?serverTimezone=America/Sao_Paulo" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="123456" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
         </properties>
     </persistence-unit>
 </persistence>
